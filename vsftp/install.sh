@@ -7,7 +7,7 @@ echo "purge and auto remove vsftpd"
 sudo apt-get purge --auto-remove vsftpd -y
 echo "remove user itfiledata"
 sudo deluser --remove-home itfiledata
-sudo rm -rf /home/itfiledata -y
+sudo rm -rf /home/itfiledata
 echo "install vsftpd"
 sudo apt-get install vsftpd -y
 sudo systemctl start vsftpd
