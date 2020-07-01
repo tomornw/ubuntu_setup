@@ -7,15 +7,16 @@ echo "purge and auto remove vsftpd"
 sudo apt-get purge --auto-remove vsftpd -y
 echo "remove user itfiledata"
 sudo deluser --remove-home itfiledata
+sudo rm -rf /home/itfiledata -y
 echo "install vsftpd"
 sudo apt-get install vsftpd -y
 sudo systemctl start vsftpd
 sudo systemctl enable vsftpd
 echo "create directory for ftp"
 sudo adduser itfiledata
+sudo chown -R itfiledata /home/itfiledata/
+sudo chmod -R 777 /home/itfiledata/
 sudo mkdir /home/itfiledata/ftp
-sudo chown -R itfiledata /home/itfiledata/ftp
-sudo chmod -R 777 /home/itfiledata/ftp
 echo "change ownership to itfiledata user"
 sudo chown itfiledata:itfiledata /home/itfiledata/ftp
 echo "edit config"
