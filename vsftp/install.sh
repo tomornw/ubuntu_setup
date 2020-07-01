@@ -13,8 +13,8 @@ sudo mkdir /home/itfiledata/ftp
 sudo chown nobody:nogroup /home/itfiledata/ftp
 sudo chmod a-w /home/itfiledata/ftp
 echo "change ownership to itfiledata user"
-sudo mkdir /home/itfiledata/ftp/test
-sudo chown itfiledata:itfiledata /home/itfiledata/ftp/test
+sudo mkdir /home/itfiledata/ftp/servicedesk
+sudo chown itfiledata:itfiledata /home/itfiledata/ftp/servicedesk
 echo "edit config"
 sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.bak
 sudo cp ./vsftpd.conf /etc/vsftpd.conf
